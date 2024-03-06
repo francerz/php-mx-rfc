@@ -136,6 +136,12 @@ class RFC
         $string = static::quitarAcentos($string);
         $string = mb_strtoupper($string);
         $string = str_replace('Ñ', '^', $string);
+        $string = preg_replace('/\s+/', ' ', $string);
+        return $string;
+    }
+
+    private static function quitarPalabras($string)
+    {
         $string = preg_replace(self::IGNORAR_REGEXP, '', $string);
         $string = preg_replace('/\s+/', ' ', $string);
         return $string;

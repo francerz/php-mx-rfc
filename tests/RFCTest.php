@@ -182,7 +182,7 @@ class RFCTest extends TestCase
             $rfc->getFechaNacimiento()
         );
 
-        $rfc = new RFC('OLAL401201HS2');
+        $rfc = new RFC('OLAL401201R99');
         $this->assertTrue($rfc->esValido());
         $this->assertTrue($rfc->esNombreValido('Álvaro', 'de la O', 'Lozano'));
         $this->assertEquals(
@@ -206,7 +206,7 @@ class RFCTest extends TestCase
             $rfc->getFechaNacimiento()
         );
 
-        $rfc = new RFC('SAGM190224752');
+        $rfc = new RFC('SAGM190224FL1');
         $this->assertTrue($rfc->esNombreValido('Mario', 'Sánchez de la Barquera', 'Gómez'));
         $this->assertTrue($rfc->esValido());
         $this->assertEquals(
@@ -214,7 +214,7 @@ class RFCTest extends TestCase
             $rfc->getFechaNacimiento()
         );
 
-        $rfc = new RFC('JIPA170808H19');
+        $rfc = new RFC('JIPA170808M4A');
         $this->assertTrue($rfc->esNombreValido('Antonio', 'Jiménez', 'Ponce de León'));
         $this->assertTrue($rfc->esValido());
         $this->assertEquals(
